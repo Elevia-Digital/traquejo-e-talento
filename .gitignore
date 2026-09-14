@@ -1,0 +1,5 @@
+_fotos-nao-usadas/
+*.zip
+Thumbs.db
+desktop.ini
+.DS_Store

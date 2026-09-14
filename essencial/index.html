@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Traquejo e Talento · Construção de edifícios em Óbidos</title>
+<meta name="description" content="Traquejo e Talento, Unipessoal Lda. Construção de edifícios residenciais e não residenciais em Óbidos e na região Oeste: moradias, prédios, armazéns, reabilitação e ampliações.">
+<meta name="theme-color" content="#1B232C">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/marca.css">
+<style>
+html{scroll-behavior:smooth}
+section[id]{scroll-margin-top:76px}
+
+/* cabeçalho */
+.cab{position:sticky;top:0;z-index:50;background:var(--cal);border-bottom:1px solid var(--linha)}
+.cab-in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:20px;height:70px}
+.menu{display:flex;align-items:center;gap:26px}
+.menu a:not(.btn){color:var(--tinta);text-decoration:none;font-size:.95rem;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.menu a:not(.btn):hover,.menu a.ativo{border-bottom-color:var(--ocre)}
+.menu .btn{min-height:42px;padding:9px 16px}
+.menu-btn{display:none;min-height:42px;padding:8px 14px;border:1px solid var(--linha-2);border-radius:4px;background:var(--branco);font-weight:600;font-size:.9rem;color:var(--tinta)}
+@media (max-width:860px){
+  .menu-btn{display:inline-block}
+  .menu{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;padding:4px clamp(18px,4vw,32px) 18px;background:var(--cal);border-bottom:1px solid var(--linha)}
+  .menu.aberto{display:flex}
+  .menu a:not(.btn){padding:13px 0;border-bottom:1px solid var(--linha)}
+  .menu a:not(.btn):hover,.menu a.ativo{border-bottom-color:var(--linha)}
+  .menu .btn{margin-top:14px}
+}
+
+/* entrada */
+.hero{padding:44px 0 64px}
+.hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:860px){.hero-in{grid-template-columns:1fr;gap:28px}.hero{padding:28px 0 48px}}
+.hero h1{font-size:clamp(2rem,4.3vw,3.05rem)}
+.hero-txt p{margin-top:16px;font-size:1.08rem;max-width:48ch}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.hero img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--raio)}
+
+/* secções */
+.sec{padding:64px 0;border-top:1px solid var(--linha)}
+@media (max-width:700px){.sec{padding:48px 0}}
+.sec-branca{background:var(--branco)}
+.sec h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+.sec .intro{margin-top:10px;max-width:62ch}
+.duas-col{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+@media (max-width:860px){.duas-col{grid-template-columns:1fr;gap:28px}}
+.duas-col img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--raio)}
+.texto p{margin-top:14px}
+
+.servicos{display:grid;grid-template-columns:1fr 1fr;gap:0 44px;margin-top:26px}
+@media (max-width:700px){.servicos{grid-template-columns:1fr}}
+.servicos div{padding:18px 0 20px;border-top:1px solid var(--linha-2)}
+.servicos h3{font-size:1.12rem}
+.servicos p{margin-top:5px}
+
+.galeria{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+@media (max-width:860px){.galeria{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.galeria{grid-template-columns:1fr}}
+.galeria figure{margin:0}
+.galeria img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--raio);background:var(--cal-2)}
+.galeria figcaption{margin-top:9px;font-weight:600;color:var(--tinta);line-height:1.35}
+.galeria figcaption span{display:block;font-weight:400;font-size:.9rem;color:var(--txt-2)}
+
+.contactos{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:48px;align-items:start}
+@media (max-width:860px){.contactos{grid-template-columns:1fr;gap:30px}}
+.dados{margin:22px 0 20px}
+.dados div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding:11px 0;border-top:1px solid var(--linha)}
+.dados div:last-child{border-bottom:1px solid var(--linha)}
+.dados dt{color:var(--txt-2)}
+.dados dd{margin:0;color:var(--tinta)}
+.dados .falta{color:var(--txt-2)}
+.form{display:grid;gap:14px;padding:24px;background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio)}
+.form h3{font-size:1.3rem}
+
+/* rodapé */
+.rod{background:var(--tinta);color:var(--txt-inv);font-size:.92rem}
+.rod-in{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.7fr) minmax(0,1.2fr);gap:32px;padding-block:44px 32px}
+@media (max-width:860px){.rod-in{grid-template-columns:1fr;gap:26px}}
+.rod p{margin-top:10px}
+.rod h2{font-size:.95rem;color:#fff;margin-bottom:10px}
+.rod nav{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.rod nav a{text-decoration:none}
+.rod nav a:hover{text-decoration:underline}
+.rod a{color:#E6EBEF}
+.rod a:hover{color:var(--ocre-2)}
+.rod details{margin-top:12px}
+.rod summary{cursor:pointer;color:#E6EBEF}
+.rod-base{border-top:1px solid var(--linha-inv)}
+.rod-base .wrap{display:flex;justify-content:space-between;gap:8px 24px;flex-wrap:wrap;padding-block:16px 22px;font-size:.82rem;color:#8E99A5}
+</style>
+</head>
+<body>
+<a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
+
+<div class="proposta-barra">
+  <div class="wrap">
+    <div class="pb-esq"><span class="pb-selo">Versão Essencial</span><span class="pb-txt">Está a ver a proposta mais simples.</span></div>
+    <nav class="pb-dir" aria-label="Propostas"><a href="../completa/">Ver a versão Completa</a><a href="../#comparar">Comparar as duas</a></nav>
+  </div>
+</div>
+<p class="demo-nota">Demonstração: as fotografias, as obras e os contactos são de exemplo. O nome, o NIF, a morada e a atividade da empresa são reais.</p>
+
+<header class="cab">
+  <div class="wrap cab-in">
+    <a class="marca" href="#inicio" aria-label="Traquejo e Talento, início">
+      <svg class="marca-simb" viewBox="0 0 44 36" aria-hidden="true"><rect x="0" y="0" width="22" height="7" fill="currentColor"/><rect x="7.5" y="7" width="7" height="29" fill="currentColor"/><rect x="22" y="0" width="22" height="7" fill="#E0A22E"/><rect x="29.5" y="7" width="7" height="29" fill="#E0A22E"/></svg>
+      <span class="marca-nome">Traquejo e Talento</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#empresa">Empresa</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#obras">Obras</a>
+      <a href="#contactos">Contactos</a>
+      <a class="btn btn-principal" href="#contactos">Pedir contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" id="inicio" aria-labelledby="hero-tit">
+    <div class="wrap hero-in">
+      <div class="hero-txt">
+        <h1 id="hero-tit">Construção de edifícios em Óbidos e na região Oeste</h1>
+        <p>Construímos moradias, prédios e edifícios para empresas, e fazemos obras de reabilitação e ampliação. Estamos nas Gaeiras, em Óbidos, desde 2022.</p>
+        <div class="hero-btns">
+          <a class="btn btn-principal" href="#contactos">Pedir contacto</a>
+          <a class="btn btn-contorno" href="#obras">Ver obras</a>
+        </div>
+      </div>
+      <img src="../img/moradia-nova.jpg" alt="Moradia de dois pisos acabada de construir" width="1800" height="1200" fetchpriority="high">
+    </div>
+  </section>
+
+  <section class="sec sec-branca" id="empresa" aria-labelledby="emp-tit">
+    <div class="wrap duas-col">
+      <div class="texto">
+        <h2 id="emp-tit">Quem somos</h2>
+        <p>A Traquejo e Talento, Unipessoal Lda é uma empresa de construção com sede nas Gaeiras, no concelho de Óbidos. Foi criada em setembro de 2022 e trabalha na construção de edifícios residenciais e não residenciais.</p>
+        <p>Fazemos obra nova e obras em edifícios existentes, para particulares e para empresas. Antes de cada orçamento vamos ver o local, e o orçamento segue sempre por escrito.</p>
+        <p>O nome junta duas coisas que queremos ter em todas as obras: a experiência de quem conhece o ofício e o cuidado com os acabamentos.</p>
+      </div>
+      <img src="../img/equipa-obra.jpg" alt="Trabalhador a assentar blocos num muro em obra" width="1400" height="923" loading="lazy">
+    </div>
+  </section>
+
+  <section class="sec" id="servicos" aria-labelledby="serv-tit">
+    <div class="wrap">
+      <h2 id="serv-tit">Serviços</h2>
+      <p class="intro">Trabalhamos em obra nova e em edifícios existentes.</p>
+      <div class="servicos">
+        <div><h3>Moradias</h3><p>Construção de moradias de raiz, a partir do projeto aprovado, das fundações aos acabamentos.</p></div>
+        <div><h3>Edifícios de habitação</h3><p>Prédios e conjuntos de moradias, para particulares, promotores e investidores.</p></div>
+        <div><h3>Edifícios para empresas</h3><p>Armazéns, pavilhões, lojas e escritórios.</p></div>
+        <div><h3>Reabilitação e ampliações</h3><p>Recuperação de casas antigas, ampliações e alterações em edifícios existentes.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-branca" id="obras" aria-labelledby="obras-tit">
+    <div class="wrap">
+      <h2 id="obras-tit">Obras</h2>
+      <p class="intro">Fotografias ilustrativas, que serão trocadas por fotografias de obras da empresa.</p>
+      <ul class="galeria">
+        <li><figure><img src="../img/obra-tijolo.jpg" alt="Moradias em construção, com estrutura de betão e paredes de tijolo" width="1800" height="1200" loading="lazy"><figcaption>Moradias em banda<span>Óbidos</span></figcaption></figure></li>
+        <li><figure><img src="../img/moradia-jardim.jpg" alt="Moradia com piscina e alpendre" width="1600" height="1067" loading="lazy"><figcaption>Moradia com piscina<span>Foz do Arelho</span></figcaption></figure></li>
+        <li><figure><img src="../img/habitacao-obra.jpg" alt="Edifício de habitação em construção, com andaimes" width="1400" height="787" loading="lazy"><figcaption>Edifício de habitação<span>Caldas da Rainha</span></figcaption></figure></li>
+        <li><figure><img src="../img/casa-antiga.jpg" alt="Casa antiga de pedra antes da recuperação" width="1400" height="933" loading="lazy"><figcaption>Recuperação de casa de pedra<span>Cadaval</span></figcaption></figure></li>
+        <li><figure><img src="../img/moradia-betao.jpg" alt="Moradia em betão com jardim" width="1049" height="1400" loading="lazy"><figcaption>Moradia<span>Gaeiras</span></figcaption></figure></li>
+        <li><figure><img src="../img/andaimes-fachada.jpg" alt="Fachada de um prédio com andaimes durante a obra" width="1400" height="932" loading="lazy"><figcaption>Reabilitação de fachada<span>Caldas da Rainha</span></figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="zona" aria-labelledby="zona-tit">
+    <div class="wrap duas-col">
+      <img src="../img/obidos-rua.jpg" alt="Rua de Óbidos com casas brancas e barras azuis" width="1400" height="1050" loading="lazy">
+      <div class="texto">
+        <h2 id="zona-tit">Onde trabalhamos</h2>
+        <p>Trabalhamos sobretudo no concelho de Óbidos e nos concelhos vizinhos: Caldas da Rainha, Bombarral, Peniche, Cadaval, Lourinhã, Alcobaça e Rio Maior.</p>
+        <p>Para obras noutras zonas, fale connosco.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-branca" id="contactos" aria-labelledby="ct-tit">
+    <div class="wrap contactos">
+      <div>
+        <h2 id="ct-tit">Contactos</h2>
+        <p class="intro">Diga-nos o que pretende fazer e onde. Respondemos com a maior brevidade possível.</p>
+        <dl class="dados">
+          <div><dt>Morada</dt><dd>Rua da Corujeira, n.º 14<br>Alto Moinho Saloio<br>2510-708 Gaeiras, Óbidos</dd></div>
+          <div><dt>Telefone</dt><dd class="falta">A indicar</dd></div>
+          <div><dt>Email</dt><dd class="falta">A indicar</dd></div>
+          <div><dt>Horário</dt><dd class="falta">A indicar</dd></div>
+        </dl>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20da%20Corujeira%2014%2C%202510-708%20Gaeiras%2C%20%C3%93bidos" target="_blank" rel="noopener">Ver a morada no Google Maps</a>
+      </div>
+
+      <form class="form" id="form-contacto" novalidate>
+        <h3>Pedir contacto</h3>
+        <div class="duas">
+          <div class="campo"><label for="c-nome">Nome</label><input id="c-nome" name="nome" autocomplete="name" required><span class="erro-msg">Indique o seu nome.</span></div>
+          <div class="campo"><label for="c-tel">Telefone</label><input id="c-tel" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required><span class="erro-msg">Indique um telefone válido.</span></div>
+        </div>
+        <div class="duas">
+          <div class="campo"><label for="c-email">Email <span class="opc">(opcional)</span></label><input id="c-email" name="email" type="email" autocomplete="email"><span class="erro-msg">Este email não parece válido.</span></div>
+          <div class="campo"><label for="c-tipo">Tipo de obra</label>
+            <select id="c-tipo" name="tipo">
+              <option>Moradia</option>
+              <option>Edifício de habitação</option>
+              <option>Edifício para empresa</option>
+              <option>Reabilitação ou ampliação</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+        </div>
+        <div class="campo"><label for="c-msg">Mensagem</label><textarea id="c-msg" name="mensagem" rows="4" placeholder="Onde é a obra e o que pretende fazer?" required></textarea><span class="erro-msg">Escreva uma mensagem.</span></div>
+        <label class="check" id="c-rgpd-l"><input type="checkbox" id="c-rgpd" required> Aceito que a Traquejo e Talento use estes dados para responder ao meu pedido.</label>
+        <button class="btn btn-escuro btn-bloco" type="submit">Enviar</button>
+        <p class="form-ok" id="c-ok" role="status" hidden><b>Obrigado.</b> Nesta demonstração a mensagem não é enviada; no site final chega ao email da empresa.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="barra-obidos" aria-hidden="true"></div>
+<footer class="rod">
+  <div class="wrap rod-in">
+    <div>
+      <span class="marca inv">
+        <svg class="marca-simb" viewBox="0 0 44 36" aria-hidden="true"><rect x="0" y="0" width="22" height="7" fill="currentColor"/><rect x="7.5" y="7" width="7" height="29" fill="currentColor"/><rect x="22" y="0" width="22" height="7" fill="#E0A22E"/><rect x="29.5" y="7" width="7" height="29" fill="#E0A22E"/></svg>
+        <span class="marca-nome">Traquejo e Talento</span>
+      </span>
+      <p>Construção de edifícios residenciais e não residenciais em Óbidos e na região Oeste.</p>
+    </div>
+    <nav aria-label="Rodapé">
+      <h2>Página</h2>
+      <a href="#empresa">Empresa</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#obras">Obras</a>
+      <a href="#zona">Onde trabalhamos</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+    <div>
+      <h2>Dados da empresa</h2>
+      <p>Traquejo e Talento, Unipessoal Lda<br>NIF 517127253<br>Rua da Corujeira, n.º 14, Alto Moinho Saloio, 2510-708 Gaeiras, Óbidos</p>
+      <p><a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener">Livro de Reclamações</a></p>
+      <details>
+        <summary>Como tratamos os seus dados</summary>
+        <p>Os dados enviados pelo formulário servem apenas para responder ao seu pedido. Não são partilhados com terceiros nem usados para publicidade, e pode pedir a qualquer momento que sejam apagados.</p>
+      </details>
+    </div>
+  </div>
+  <div class="rod-base"><div class="wrap"><span>© 2026 Traquejo e Talento, Unipessoal Lda</span><span>Site feito pela Elevia Digital</span></div></div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ao abrir do disco (file://), as pastas não abrem o index.html sozinhas */
+  if (location.protocol === 'file:') {
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var h = a.getAttribute('href'), m = h.match(/^([^#?:]*\/)([#?].*)?$/);
+      if (m) a.setAttribute('href', m[1] + 'index.html' + (m[2] || ''));
+    });
+  }
+
+  /* menu no telemóvel */
+  var menu = document.getElementById('menu'), botao = document.querySelector('.menu-btn');
+  function fechar() { menu.classList.remove('aberto'); botao.setAttribute('aria-expanded', 'false'); }
+  botao.addEventListener('click', function () {
+    var abrir = !menu.classList.contains('aberto');
+    menu.classList.toggle('aberto', abrir);
+    botao.setAttribute('aria-expanded', String(abrir));
+  });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) fechar(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') fechar(); });
+
+  /* ligação do menu correspondente à secção visível */
+  var ligacoes = Array.prototype.slice.call(menu.querySelectorAll('a:not(.btn)'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        ligacoes.forEach(function (a) { a.classList.toggle('ativo', a.getAttribute('href') === '#' + en.target.id); });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['inicio', 'empresa', 'servicos', 'obras', 'zona', 'contactos'].forEach(function (id) { io.observe(document.getElementById(id)); });
+  }
+
+  /* formulário: validação simples, sem envio nesta demonstração */
+  var form = document.getElementById('form-contacto');
+  function marcar(el, invalido) { var c = el.closest('.campo'); if (c) c.classList.toggle('erro', invalido); el.setAttribute('aria-invalid', invalido ? 'true' : 'false'); }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nome = form.elements.nome, tel = form.elements.telefone, email = form.elements.email, msg = form.elements.mensagem, rgpd = document.getElementById('c-rgpd');
+    var erros = [];
+    var okNome = nome.value.trim().length >= 2; marcar(nome, !okNome); if (!okNome) erros.push(nome);
+    var okTel = tel.value.replace(/\D/g, '').length >= 9; marcar(tel, !okTel); if (!okTel) erros.push(tel);
+    var okEmail = !email.value.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()); marcar(email, !okEmail); if (!okEmail) erros.push(email);
+    var okMsg = msg.value.trim().length >= 5; marcar(msg, !okMsg); if (!okMsg) erros.push(msg);
+    document.getElementById('c-rgpd-l').classList.toggle('erro', !rgpd.checked); if (!rgpd.checked) erros.push(rgpd);
+    if (erros.length) { erros[0].focus(); return; }
+    var ok = document.getElementById('c-ok');
+    form.reset();
+    ok.hidden = false;
+    ok.setAttribute('tabindex', '-1');
+    ok.focus();
+  });
+  form.addEventListener('input', function (e) { var c = e.target.closest('.campo'); if (c && c.classList.contains('erro')) marcar(e.target, false); });
+})();
+</script>
+</body>
+</html>

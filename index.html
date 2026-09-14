@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Traquejo e Talento · Propostas de website</title>
+<meta name="description" content="Proposta de website para a Traquejo e Talento, Unipessoal Lda, empresa de construção de edifícios em Óbidos. Duas versões: Essencial e Completa.">
+<meta name="theme-color" content="#1B232C">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/marca.css">
+<style>
+.topo{background:var(--tinta);color:var(--txt-inv);padding:48px 0 130px}
+.topo-in{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:40px;align-items:end}
+@media (max-width:860px){.topo{padding:36px 0 118px}.topo-in{grid-template-columns:1fr;gap:28px}}
+.topo .etiqueta{font-size:.82rem;font-weight:600;color:var(--ocre-2)}
+.topo h1{color:#fff;font-size:clamp(2rem,4.4vw,3.1rem);margin-top:10px;max-width:20ch}
+.topo .lead{margin-top:16px;max-width:60ch;font-size:1.04rem}
+.empresa{padding:20px 22px;border:1px solid var(--linha-inv);border-radius:var(--raio)}
+.empresa .marca-simb{width:34px}
+.empresa dl{margin:16px 0 0;display:grid;gap:9px;font-size:.86rem}
+.empresa dt{font-size:.74rem;color:#8E99A5}
+.empresa dd{margin:1px 0 0;color:#EDF1F4}
+
+.cartoes{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:-86px;align-items:stretch}
+@media (max-width:860px){.cartoes{grid-template-columns:1fr}}
+.cartao{display:flex;flex-direction:column;background:var(--branco);border:1px solid var(--linha);border-radius:var(--raio);overflow:hidden}
+.cartao-img{display:block;aspect-ratio:16/8;background:var(--cal-2)}
+.cartao-img img{width:100%;height:100%;object-fit:cover}
+.cartao-corpo{display:flex;flex-direction:column;flex:1;padding:24px 26px 26px}
+@media (max-width:480px){.cartao-corpo{padding:20px 18px 22px}}
+.cartao .qual{font-size:.8rem;font-weight:600;color:var(--txt-2)}
+.cartao h2{font-size:1.6rem;margin-top:4px}
+.cartao-desc{margin-top:8px}
+.preco{margin-top:18px;padding-bottom:18px;border-bottom:1px solid var(--linha)}
+.preco b{font-size:2.4rem;font-weight:700;color:var(--tinta);letter-spacing:-.02em;line-height:1}
+.preco span{display:block;margin-top:4px;font-size:.84rem;color:var(--txt-2)}
+.lista{margin:18px 0 24px;padding-left:20px;display:grid;gap:7px;flex:1;align-content:start;font-size:.95rem}
+.lista li::marker{color:var(--ocre-texto)}
+
+.sec{padding:clamp(56px,8vw,90px) 0}
+.sec h2{font-size:clamp(1.6rem,3vw,2.1rem)}
+.sec .intro{margin-top:10px;max-width:62ch}
+
+.tabela-wrap{margin-top:28px;overflow-x:auto;border:1px solid var(--linha);border-radius:var(--raio);background:var(--branco)}
+.tabela{width:100%;min-width:600px;border-collapse:collapse;font-size:.93rem}
+.tabela thead th{background:var(--tinta);color:#fff;font-weight:600;padding:13px 16px;text-align:center}
+.tabela thead th:first-child{text-align:left}
+.tabela th[scope=row]{text-align:left;font-weight:400;color:var(--txt);padding:11px 16px;width:44%}
+.tabela td{text-align:center;padding:11px 16px;color:var(--tinta)}
+.tabela td.c{background:#FBF6EA}
+.tabela tbody tr{border-top:1px solid var(--linha)}
+.tabela tr.grupo th{background:var(--cal-2);font-weight:700;font-size:.86rem;color:var(--tinta);padding:9px 16px;text-align:left}
+.tabela .nao{color:#9AA0A8}
+.dica{display:none;margin-top:8px;font-size:.8rem;color:var(--txt-2)}
+@media (max-width:700px){.dica{display:block}}
+
+.escolher{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+@media (max-width:760px){.escolher{grid-template-columns:1fr}}
+.escolher article{padding:22px 24px 24px;border:1px solid var(--linha);border-radius:var(--raio);background:var(--branco)}
+.escolher h3{font-size:1.15rem}
+.escolher p{margin-top:8px}
+.escolher .btn{margin-top:16px}
+.nota{margin-top:24px;padding:16px 18px;border-radius:var(--raio);background:#F2E8CF;border:1px solid #E3D3AB;color:#4E3D0C;font-size:.92rem}
+
+.rodape{background:var(--tinta);color:#9AA5B1;font-size:.84rem}
+.rodape .wrap{display:flex;justify-content:space-between;gap:10px 30px;flex-wrap:wrap;padding-block:24px}
+</style>
+</head>
+<body>
+<a class="saltar" href="#propostas">Saltar para as propostas</a>
+
+<header class="topo">
+  <div class="wrap topo-in">
+    <div>
+      <p class="etiqueta">Proposta de website</p>
+      <h1>Duas versões do site da Traquejo e Talento</h1>
+      <p class="lead">As duas versões estão feitas e pode navegar em cada uma antes de decidir. A primeira é mais simples e serve para apresentar a empresa. A segunda é mais completa e inclui pedidos de orçamento e opiniões de clientes.</p>
+    </div>
+    <aside class="empresa" aria-label="Dados da empresa">
+      <span class="marca inv">
+        <svg class="marca-simb" viewBox="0 0 44 36" aria-hidden="true"><rect x="0" y="0" width="22" height="7" fill="currentColor"/><rect x="7.5" y="7" width="7" height="29" fill="currentColor"/><rect x="22" y="0" width="22" height="7" fill="#E0A22E"/><rect x="29.5" y="7" width="7" height="29" fill="#E0A22E"/></svg>
+        <span class="marca-nome">Traquejo e Talento</span>
+      </span>
+      <dl>
+        <div><dt>Atividade</dt><dd>Construção de edifícios residenciais e não residenciais</dd></div>
+        <div><dt>Sede</dt><dd>Gaeiras, Óbidos</dd></div>
+        <div><dt>Constituída em</dt><dd>Setembro de 2022</dd></div>
+      </dl>
+    </aside>
+  </div>
+</header>
+
+<main id="propostas">
+  <div class="wrap cartoes">
+    <article class="cartao">
+      <a class="cartao-img" href="essencial/" tabindex="-1" aria-hidden="true"><img src="img/moradia-nova.jpg" alt="" width="1800" height="1200"></a>
+      <div class="cartao-corpo">
+        <span class="qual">Proposta A</span>
+        <h2>Versão Essencial</h2>
+        <p class="cartao-desc">Uma página com o essencial: quem é a empresa, o que faz, algumas obras e os contactos.</p>
+        <p class="preco"><b>850 €</b><span>valor único, site pronto a publicar</span></p>
+        <ul class="lista">
+          <li>Página única, com menu para cada parte</li>
+          <li>Apresentação da empresa</li>
+          <li>Serviços</li>
+          <li>Galeria com 6 obras</li>
+          <li>Zona onde a empresa trabalha</li>
+          <li>Formulário de contacto</li>
+        </ul>
+        <a class="btn btn-escuro btn-bloco" href="essencial/">Ver a versão Essencial</a>
+      </div>
+    </article>
+
+    <article class="cartao">
+      <a class="cartao-img" href="completa/" tabindex="-1" aria-hidden="true"><img src="img/obra-tijolo.jpg" alt="" width="1800" height="1200"></a>
+      <div class="cartao-corpo">
+        <span class="qual">Proposta B</span>
+        <h2>Versão Completa</h2>
+        <p class="cartao-desc">Um site com várias páginas, pensado para receber pedidos de orçamento e mostrar a opinião dos clientes.</p>
+        <p class="preco"><b>1.200 €</b><span>valor único, site pronto a publicar</span></p>
+        <ul class="lista">
+          <li>Pedido de orçamento em 4 passos, com envio de plantas e fotografias</li>
+          <li>Opiniões de clientes, com formulário para deixarem a sua</li>
+          <li>10 obras com filtros e ficha de cada obra, e as mais recentes em carrossel</li>
+          <li>6 serviços e perguntas frequentes</li>
+          <li>Página da empresa com os dados oficiais</li>
+          <li>Mapa e botão de WhatsApp</li>
+        </ul>
+        <a class="btn btn-principal btn-bloco" href="completa/">Ver a versão Completa</a>
+      </div>
+    </article>
+  </div>
+
+  <section class="sec" id="comparar" aria-labelledby="comp-tit">
+    <div class="wrap">
+      <h2 id="comp-tit">O que muda de uma para a outra</h2>
+      <p class="intro">As duas têm o mesmo aspeto e usam os mesmos dados da empresa. A diferença está na quantidade de conteúdo e no que o site faz por si.</p>
+
+      <div class="tabela-wrap" role="region" aria-labelledby="comp-tit" tabindex="0">
+        <table class="tabela">
+          <thead><tr><th scope="col"><span class="sr">Característica</span></th><th scope="col">Essencial</th><th scope="col">Completa</th></tr></thead>
+          <tbody>
+            <tr class="grupo"><th colspan="3" scope="colgroup">Estrutura</th></tr>
+            <tr><th scope="row">Formato</th><td>Uma página</td><td class="c">Sete páginas</td></tr>
+            <tr><th scope="row">Fotografias</th><td>9</td><td class="c">13</td></tr>
+
+            <tr class="grupo"><th colspan="3" scope="colgroup">Conteúdo</th></tr>
+            <tr><th scope="row">Apresentação da empresa</th><td>Resumo</td><td class="c">Página própria, com os dados oficiais</td></tr>
+            <tr><th scope="row">Serviços</th><td>4, em lista</td><td class="c">6, com o que inclui cada um</td></tr>
+            <tr><th scope="row">Obras</th><td>Galeria com 6 fotografias</td><td class="c">10 obras com filtros e ficha</td></tr>
+            <tr><th scope="row">Carrossel de obras recentes na página inicial</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+            <tr><th scope="row">Como funciona uma obra</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+            <tr><th scope="row">Perguntas frequentes</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+
+            <tr class="grupo"><th colspan="3" scope="colgroup">Pedidos de orçamento</th></tr>
+            <tr><th scope="row">Formulário</th><td>Contacto simples</td><td class="c">Pedido de orçamento em 4 passos</td></tr>
+            <tr><th scope="row">Envio de plantas e fotografias</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+            <tr><th scope="row">Resumo antes de enviar e número do pedido</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+            <tr><th scope="row">Pedir orçamento a partir de uma obra ou serviço</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+
+            <tr class="grupo"><th colspan="3" scope="colgroup">Opiniões de clientes</th></tr>
+            <tr><th scope="row">Opiniões publicadas, com média</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+            <tr><th scope="row">Formulário para o cliente deixar opinião</th><td class="nao">Não</td><td class="c">Sim, publicada depois de aprovada</td></tr>
+            <tr><th scope="row">Resposta da empresa às opiniões</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+
+            <tr class="grupo"><th colspan="3" scope="colgroup">Contacto</th></tr>
+            <tr><th scope="row">Mapa</th><td>Ligação para o Google Maps</td><td class="c">Mapa na página</td></tr>
+            <tr><th scope="row">Botão de WhatsApp</th><td class="nao">Não</td><td class="c">Sim</td></tr>
+
+            <tr class="grupo"><th colspan="3" scope="colgroup">Comum às duas</th></tr>
+            <tr><th scope="row">Logótipo provisório</th><td>Sim</td><td class="c">Sim</td></tr>
+            <tr><th scope="row">Adaptado a telemóvel</th><td>Sim</td><td class="c">Sim</td></tr>
+            <tr><th scope="row">Dados legais e Livro de Reclamações</th><td>Sim</td><td class="c">Sim</td></tr>
+            <tr><th scope="row">Alojamento e link público</th><td>Sim</td><td class="c">Sim</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="dica">Deslize a tabela para o lado para ver as duas colunas.</p>
+
+      <div class="escolher">
+        <article>
+          <h3>Escolha a Essencial se…</h3>
+          <p>precisa sobretudo de estar na internet com uma imagem séria: quem procura um construtor em Óbidos encontra a empresa, vê o que faz e liga.</p>
+          <a class="btn btn-contorno" href="essencial/">Ver a Essencial</a>
+        </article>
+        <article>
+          <h3>Escolha a Completa se…</h3>
+          <p>quer que o site ajude a trazer obras: receber pedidos de orçamento já com a informação necessária, mostrar mais trabalho feito e juntar as opiniões de quem já trabalhou convosco.</p>
+          <a class="btn btn-principal" href="completa/">Ver a Completa</a>
+        </article>
+      </div>
+
+      <p class="nota">Os valores podem ser ajustados. Nas duas versões, as fotografias, as obras, as opiniões e os contactos são de exemplo e serão trocados pelos da empresa antes de publicar. O logótipo é provisório. Nesta demonstração os formulários não enviam dados; no site final ligam ao email da empresa.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <span>Traquejo e Talento, Unipessoal Lda · Gaeiras, Óbidos</span>
+    <span>Proposta preparada pela Elevia Digital, setembro de 2026</span>
+  </div>
+</footer>
+
+<script>
+/* ao abrir do disco (file://), as pastas não abrem o index.html sozinhas */
+if (location.protocol === 'file:') {
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    var h = a.getAttribute('href'), m = h.match(/^([^#?:]*\/)([#?].*)?$/);
+    if (m) a.setAttribute('href', m[1] + 'index.html' + (m[2] || ''));
+  });
+}
+</script>
+</body>
+</html>
